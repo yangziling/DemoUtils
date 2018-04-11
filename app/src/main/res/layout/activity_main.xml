@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.houli.demoutils.MainActivity">
+
+       <Button
+           android:id="@+id/btn_Time"
+           android:layout_width="match_parent"
+           android:layout_height="50dp"
+           android:layout_margin="10dp"
+           android:text="时间选择器" />
+       <EditText
+           android:id="@+id/edittext"
+           android:focusable="false"
+           android:text="条件选择器"
+           android:layout_width="match_parent"
+           android:layout_height="40dp" />
+       <Button
+           android:id="@+id/doucument"
+           android:text="跳转文本编辑页面"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content" />
+       <Button
+           android:id="@+id/time"
+           android:text="转化成毫秒"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content" />
+       <Button
+           android:id="@+id/menu_button"
+           android:text="进入悬浮菜单"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content" />
+       <Button
+           android:id="@+id/erweimascan"
+           android:text="二维码扫面"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content" />
+       <Button
+           android:id="@+id/web_scan"
+           android:text="进入浏览器"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content" />
+       <Button
+           android:id="@+id/wheel_view"
+           android:text="進入選擇器"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content" />
+       <Button
+           android:id="@+id/wheel_view2"
+           android:text="二级级联"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content" />
+
+
+</LinearLayout>
