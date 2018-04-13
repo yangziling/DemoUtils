@@ -50,7 +50,7 @@
            android:layout_height="wrap_content" />
        <Button
            android:id="@+id/wheel_view2"
-           android:text="二级级联"
+           android:text="绘制方形"
            android:layout_width="wrap_content"
            android:layout_height="wrap_content" />
 

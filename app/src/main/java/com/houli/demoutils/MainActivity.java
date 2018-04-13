@@ -64,8 +64,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         wheel_view2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
-
+                Intent intent = new Intent(MainActivity.this,RefViewActivity.class);
+                startActivity(intent);
             }
         });
 
