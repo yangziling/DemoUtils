@@ -13,13 +13,11 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.houli.demoutils.wheelview.view;
+package com.houli.demoutils.wheelview.view.graphics;
 
 import android.graphics.drawable.Drawable;
 
-import com.wx.wheelview.graphics.CommonDrawable;
-import com.wx.wheelview.graphics.HoloDrawable;
-import com.wx.wheelview.widget.WheelView;
+import com.houli.demoutils.wheelview.view.WheelView;
 
 /**
  * @author venshine

@@ -1,6 +1,7 @@
 
 package com.houli.demoutils.wheelview.view;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.graphics.Canvas;
 import android.graphics.Color;
@@ -23,6 +24,8 @@ import android.widget.AdapterView;
 import android.widget.ListAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
+
+import com.houli.demoutils.wheelview.view.graphics.DrawableFactory;
 import com.wx.wheelview.adapter.ArrayWheelAdapter;
 import com.wx.wheelview.adapter.BaseWheelAdapter;
 import com.wx.wheelview.adapter.SimpleWheelAdapter;
@@ -72,6 +75,7 @@ public class WheelView<T> extends ListView implements IWheelView<T> {
 
     private OnWheelItemClickListener<T> mOnWheelItemClickListener;
 
+    @SuppressLint("HandlerLeak")
     private Handler mHandler = new Handler() {
         @Override
         public void handleMessage(Message msg) {
@@ -232,7 +236,7 @@ public class WheelView<T> extends ListView implements IWheelView<T> {
                         refreshVisibleItems(getFirstVisiblePosition(),
                                 getCurrentPosition() + mWheelSize / 2,
                                 mWheelSize / 2);
-//                        setBackground();
+                        setBackground();
                     } else {
                         throw new WheelViewException("wheel item is error.");
                     }
@@ -262,15 +266,15 @@ public class WheelView<T> extends ListView implements IWheelView<T> {
     /**
      * 设置背景
      */
-//    private void setBackground() {
-//        Drawable drawable = DrawableFactory.createDrawable(mSkin, getWidth(),
-//                mItemH * mWheelSize, mStyle, mWheelSize, mItemH);
-//        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN) {
-//            setBackground(drawable);
-//        } else {
-//            setBackgroundDrawable(drawable);
-//        }
-//    }
+    private void setBackground() {
+        Drawable drawable = DrawableFactory.createDrawable(mSkin, getWidth(),
+                mItemH * mWheelSize, mStyle, mWheelSize, mItemH);
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN) {
+            setBackground(drawable);
+        } else {
+            setBackgroundDrawable(drawable);
+        }
+    }
 
     /**
      * 获得皮肤风格

@@ -28,7 +28,7 @@ public class WheelViewActivity extends BaseActivity {
         //第一层
         mainWheelView = (WheelView) findViewById(R.id.main_wheelview);
         mainWheelView.setWheelAdapter(new ArrayWheelAdapter(this));
-        mainWheelView.setSkin(WheelView.Skin.Common);
+        mainWheelView.setSkin(WheelView.Skin.Holo);
         mainWheelView.setWheelData(createMainDatas());
         WheelView.WheelViewStyle style = new WheelView.WheelViewStyle();
         style.selectedTextSize = 20;
